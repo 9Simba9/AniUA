@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCDB3066-DACC-4793-A1B3-3A76E0F79040}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AniUA</RootNamespace>
+    <AssemblyName>AniUA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cat_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GameS_for_UA\MySQL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1100" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\DBregLog.cs" />
+    <Compile Include="form\addAnime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\addAnime.Designer.cs">
+      <DependentUpon>addAnime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\editAnime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\editAnime.Designer.cs">
+      <DependentUpon>editAnime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\editComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\editComments.Designer.cs">
+      <DependentUpon>editComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\editUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\editUser.Designer.cs">
+      <DependentUpon>editUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\LoadAnime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\LoadAnime.Designer.cs">
+      <DependentUpon>LoadAnime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\LoadEpisodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\LoadEpisodes.Designer.cs">
+      <DependentUpon>LoadEpisodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\mainAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\mainAdmin.Designer.cs">
+      <DependentUpon>mainAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\main\announce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\main\announce.Designer.cs">
+      <DependentUpon>announce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\main\completed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\main\completed.Designer.cs">
+      <DependentUpon>completed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\main\films.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\main\films.Designer.cs">
+      <DependentUpon>films.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\PlayerAniUA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\PlayerAniUA.Designer.cs">
+      <DependentUpon>PlayerAniUA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\save\abandoned.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\save\abandoned.Designer.cs">
+      <DependentUpon>abandoned.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\save\planned.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\save\planned.Designer.cs">
+      <DependentUpon>planned.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\save\postponed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\save\postponed.Designer.cs">
+      <DependentUpon>postponed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\save\revised.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\save\revised.Designer.cs">
+      <DependentUpon>revised.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\save\save.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\save\save.Designer.cs">
+      <DependentUpon>save.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\save\watch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\save\watch.Designer.cs">
+      <DependentUpon>watch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="form\regist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\regist.Designer.cs">
+      <DependentUpon>regist.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="form\addAnime.resx">
+      <DependentUpon>addAnime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\editAnime.resx">
+      <DependentUpon>editAnime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\editComments.resx">
+      <DependentUpon>editComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\editUser.resx">
+      <DependentUpon>editUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\LoadAnime.resx">
+      <DependentUpon>LoadAnime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\LoadEpisodes.resx">
+      <DependentUpon>LoadEpisodes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\mainAdmin.resx">
+      <DependentUpon>mainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\main\announce.resx">
+      <DependentUpon>announce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\main\completed.resx">
+      <DependentUpon>completed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\main\films.resx">
+      <DependentUpon>films.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\PlayerAniUA.resx">
+      <DependentUpon>PlayerAniUA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\save\abandoned.resx">
+      <DependentUpon>abandoned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\save\planned.resx">
+      <DependentUpon>planned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\save\postponed.resx">
+      <DependentUpon>postponed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\save\revised.resx">
+      <DependentUpon>revised.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\save\save.resx">
+      <DependentUpon>save.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\save\watch.resx">
+      <DependentUpon>watch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\user.resx">
+      <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\regist.resx">
+      <DependentUpon>regist.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Class\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1633367976_photo_2021-10-04_20-18-38.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\cat_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\users_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\eye_icon_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\eye_icon_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\lock_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\search_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\cat_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cat_icon.ico" />
+    <Content Include="Resources\UI\user_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
